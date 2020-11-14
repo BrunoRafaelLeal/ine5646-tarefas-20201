@@ -25,8 +25,13 @@ class Pessoa {
  * @returns [Pessoa]
  */
 function selecionaPessoas (pessoas, idadeLimite) {
-  // FIXME Bug 
-  return pessoas
+  var resposta = [];
+  for (var pessoa of pessoas) {
+    if (pessoa.idade > idadeLimite) {
+      resposta.push(pessoa);
+    }
+  } 
+  return resposta;
 }
 
 // Dados fictícios
